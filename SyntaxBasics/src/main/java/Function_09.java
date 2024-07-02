@@ -12,6 +12,8 @@ public class Function_09 {
         my_print();
         //带参数方法的定义和调用
         System.out.println(getMax(10,20));
+        //可变形参的方法调用
+        System.out.println(add2(1,2,3,4,5));
     }
 
     /**
@@ -48,6 +50,18 @@ public class Function_09 {
     public static double add(double a,double b){
         System.out.println("我是double的add方法");
         return a+b;
+    }
+
+    //4-可变形参的方法
+    //在调用方法时类型确定，但是数量不确定
+    public static int add2(int...num){
+        //相当于传入的是一个int[] num
+        int sum = 0;
+        for(int i:num){
+            sum+=i;
+        }
+        System.out.println("我是可变形参的方法");
+        return sum;
     }
 
 
