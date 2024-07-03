@@ -1,4 +1,4 @@
-package part1;
+package part1_enum;
 
 /**
  * @BelongsProject: JavaBasics
@@ -11,6 +11,12 @@ package part1;
 public class Enum_Test {
     public static void main(String[] args) {
         Enum_Direction dir = Enum_Direction.EAST;
-        System.out.println(dir);
+        System.out.println(dir.getName());
+
+        //valueOf()获取枚举常量
+        for(Enum_Direction d : Enum_Direction.values()){
+            //获取名称
+            System.out.println(d.getName());
+        }
     }
 }
