@@ -15,7 +15,6 @@ public class DataTypeConversion_03 {
         double b = 2.4;
         System.out.println(a+b);
         System.out.println("==============================");
-
         //2.强制类型转换
         //将取值范围大的数据类型赋值给取值范围小的数据类型
         //取值范围小的数据类型 变量名 = 取值范围大的数据类型 -> 需要强转
