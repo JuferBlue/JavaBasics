@@ -47,4 +47,11 @@ public class Student {
                 ", age=" + age +
                 '}';
     }
+
+    public void show(){
+        System.out.println("我是一个方法");
+    }
+    private void showAge(int age){
+        System.out.println("年龄是："+age);
+    }
 }
