@@ -2,10 +2,7 @@ package com.blue.controller;
 
 import com.blue.pojo.Student;
 import com.blue.pojo.User;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -60,5 +57,12 @@ public class RequestController {
     public String jsonParam(@RequestBody Student student) {
         System.out.println("student=" + student);
         return "student=" + student;
+    }
+
+    //接收路径参数
+    @RequestMapping("/pathParam/{id}/{name}")
+    public String pathParam(@PathVariable("id") int id, @PathVariable("name") String name) {
+        System.out.println("id=" + id + " name=" + name);
+        return "id=" + id + " name=" + name;
     }
 }
