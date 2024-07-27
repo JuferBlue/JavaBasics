@@ -16,7 +16,9 @@ public class Test {
         Class clazz = Class.forName("part2_annotation.InitDemo");
         Method[] methods = clazz.getMethods();
         if(methods != null){
+            //扫描所有的方法
             for (Method method : methods) {
+                //判断该方法上是否有 注解
                 boolean isInitMethod = method.isAnnotationPresent(MyAnnotation.class);
                  if(isInitMethod){
                      method.invoke(clazz.getConstructor(null).newInstance(null),null);

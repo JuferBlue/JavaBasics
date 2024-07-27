@@ -6,6 +6,9 @@
       <list>
         <option value="$PROJECT_DIR$/SyntaxBasics/pom.xml" />
         <option value="$PROJECT_DIR$/AdvancedTechniques/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
       </list>
     </option>
   </component>
