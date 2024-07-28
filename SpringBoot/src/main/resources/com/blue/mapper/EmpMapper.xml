@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--XML映射文件的名称与Mapper接口名称一致，并将XML文件和Mapper接口放在同一个包下-->
+<!--XML映射文件的namespace属性为Mapper接口全类名一致-->
+<!--XML文件中id与Mapper接口方法名一致，返回类型一致-->
+<mapper namespace="com.blue.mapper.EmpMapper">
+    <!--resulType为单条记录所返回的类型-->
+<!--    <select id="getByCondition" resultType="com.blue.mybatis.Emp">-->
+<!--        select *-->
+<!--        from emp-->
+<!--        where name like concat('%', #{name}, '%')-->
+<!--          and gender = #{gender}-->
+<!--          and entrydate between #{begin} and #{end}-->
+<!--        order by update_time desc-->
+<!--    </select>-->
+
+
+<!--    动态SQL -->
+<!--    if:如果test属性成立则拼接SQL-->
+    <select id="getByCondition" resultType="com.blue.mybatis.Emp">
+        select *
+        from emp
+        <where>
+            <if test="name!=null">
+                name like concat('%', #{name}, '%')
+            </if>
+            <if test="gender!=null">
+                and gender = #{gender}
+            </if>
+            <if test="begin!=null and end!=null">
+                and entrydate between #{begin} and #{end}
+            </if>
+        </where>
+        order by update_time desc
+    </select>
+
+<!--    foreach-->
+<!--    collection:遍历的集合-->
+<!--    item：遍历的元素-->
+<!--    open:遍历开始前拼接的片段-->
+<!--    close:遍历结束后拼接的片段-->
+<!--    separator:分隔符-->
+    <delete id="deleteByIds">
+        delete from emp where id in
+
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+
+</mapper>

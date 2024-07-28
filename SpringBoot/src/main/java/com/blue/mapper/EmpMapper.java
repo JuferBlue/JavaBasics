@@ -32,7 +32,16 @@ public interface EmpMapper {
      //#在sql语句中，#{}表示占位符，${}表示拼接字符串
 //     @Select("select * from emp where name like '%${name}%' and gender = #{gender} and entrydate between #{begin} and #{end} order by update_time desc")
      //用concat拼接字符串更安全
-     @Select("select * from emp where name like concat('%',#{name},'%') and gender = #{gender} and entrydate between #{begin} and #{end} order by update_time desc")
-     public List<Emp> getByCondition(String name, short gender, LocalDate begin, LocalDate end );
+//     @Select("select * from emp where name like concat('%',#{name},'%') and gender = #{gender} and entrydate between #{begin} and #{end} order by update_time desc")
+//     public List<Emp> getByCondition(String name, short gender, LocalDate begin, LocalDate end );
+     public List<Emp> getByCondition(String name, Short gender, LocalDate begin, LocalDate end );
+
+
+     //批量删除员工
+     public void deleteByIds(List<Integer> ids);
+
+     //分页查询
+     @Select("select * from emp")
+     public List<Emp> getAll();
 
 }

@@ -23,9 +23,9 @@ public class Emp {
     private String username;
     private String password;
     private String name;
-    private short gender;
+    private Short gender;
     private String image;
-    private short job;
+    private Short job;
     private LocalDate entrydate;
     private Integer deptId;
     private LocalDateTime createTime;
