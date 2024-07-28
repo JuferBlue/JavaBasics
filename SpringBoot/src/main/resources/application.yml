@@ -4,3 +4,9 @@ spring:
     url: jdbc:mysql://localhost:3306/spring_boot
     username: root
     password: 147258369
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #设置mybatis日志
+    map-underscore-to-camel-case: true # 开启驼峰命名自动映射
