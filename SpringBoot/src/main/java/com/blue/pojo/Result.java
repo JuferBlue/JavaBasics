@@ -26,7 +26,7 @@ public class Result {
     public static Result success(Object data){
         return new Result(1,"success",data);
     }
-    public static Result error(){
+    public static Result error(String s){
         return new Result(0,"error",null);
     }
 }
