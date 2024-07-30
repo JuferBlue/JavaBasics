@@ -24,6 +24,6 @@ mybatis:
 aliyun:
   oss:
     endpoint: http://oss-cn-beijing.aliyuncs.com
-    access-key-id:
-    access-key-secret:
+#    access-key-id:
+#    access-key-secret:
     bucket-name: springboot-blue
