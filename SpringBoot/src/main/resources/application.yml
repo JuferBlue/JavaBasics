@@ -20,9 +20,4 @@ mybatis:
     map-underscore-to-camel-case: true # 开启驼峰命名自动映射
 
 
-# 阿里云oss配置
-aliyun:
-  oss:
-    endpoint: http://oss-cn-beijing.aliyuncs.com
 
-    bucket-name: springboot-blue
