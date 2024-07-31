@@ -14,7 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Description: TODO
  * @Version: 1.0
  */
-@Configuration//配置类
+@Configuration//配置类 @Configuration = @Component
 public class WebConfig implements WebMvcConfigurer {
     @Autowired//注入拦截器
     private LoginCheckInterceptor loginCheckInterceptor;

@@ -4,6 +4,8 @@ import com.blue.mybatis.PageBean;
 import com.blue.pojo.Result;
 import com.blue.service.EmpService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description: TODO
  * @Version: 1.0
  */
+//@Lazy //延迟初始化，只有在调用时才会初始化
+//@Scope("prototype") //作用域多例  默认 singleton单例
 @RestController
 public class EmpController {
     @Autowired

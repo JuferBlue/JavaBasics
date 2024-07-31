@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @Description: TODO
  * @Version: 1.0
  */
-@Component  //要写一个注解类
+@Component  //要写一个配置类
 public class LoginCheckInterceptor implements HandlerInterceptor {
     @Override//目标资源方法运行前运行返回true放行，false不放行
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
